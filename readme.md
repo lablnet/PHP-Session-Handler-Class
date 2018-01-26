@@ -8,6 +8,3 @@ This package support
  3. Delete/unset session
  4. Check session is set or not
  5. Get value back of session
- 
- 
- Thanks

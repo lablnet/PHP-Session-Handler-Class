@@ -1,8 +1,19 @@
 <?php
+	/**
+	 * This package Can handel session.
+	 *
+	 * @author   Malik Umer Farooq <lablnet01@gmail.com>
+	 * @author-profile https://www.facebook.com/malikumerfarooq01/
+	 * @license MIT 
+	 * @link      https://github.com/Lablnet/PHP-Sessuib-Handler-Class
+	 */
 class Session
 {
 
-	//Method ____construct
+	 /**
+     * Start the session if not already start
+     * @return void
+    */
 	public function __construct(){
 
 		if(session_status() === PHP_SESSION_NONE){
@@ -13,7 +24,12 @@ class Session
 
 	}
 
-	//Method CheckStatus
+		
+     /** 
+     *Check if session is already set with specific name
+     * @param $name (string) name of session e.g users
+     * @return boolean
+    */
 	public function CheckStatus($name){
 
 		if(isset($_SESSION[$name])){
@@ -28,7 +44,11 @@ class Session
 
 	}
 
-	//Method GetValue
+     /**
+     * Get the session value by providing session name
+     * @param $name (string) name of session e.g users
+     * @return string
+    */
 	public function GetValue($name){
 
 		if($this->CheckStatus($name) === true){
@@ -42,7 +62,13 @@ class Session
 		}
 	}
 
-	//Method SetValue
+     /**
+     * Set/store value in session
+     * @param $params (array) 
+     * 'name' => name of session e.g users
+     * 'value' => value store in session e.g user token 
+     * @return string
+    */
 	public function SetValue($params){
 
 		if(is_array($params)){
@@ -61,7 +87,11 @@ class Session
 		}
 	}
 
-	//Method UnsetValue
+    /**
+     * Delete/unset the session
+     * @param $name (string) name of session e.g users
+     * @return boolean
+    */ 
 	public function UnsetValue($name){
 
 		if($this->CheckStatus($name) === true){
