@@ -1,10 +1,11 @@
 # PHP Session Handler class
 
-## This package Can handel session.
+## This class can store and retrieve session values.
 
-This package support
- 1. starting session if not start
- 2. Set value in session
- 3. Delete/unset session
- 4. Check session is set or not
- 5. Get value back of session
+It implements the basic functions to manipulate values stored in regular PHP sessions. Currently it can:
+
+1. Start a session if it was not started
+2. Set a session value
+3. Delete or unset session values
+4. Check whether a session value is set or not
+5. Retrieve a session value
