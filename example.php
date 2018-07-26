@@ -1,20 +1,21 @@
 <?php
+
 require_once 'classes/Session.php';
 
-$sess = new Session;
+$sess = new Session();
 
-$name = "session";
+$name = 'session';
 
-$value = "Hay i am php session";
+$value = 'Hay i am php session';
 
 /*
 // Set/store value in session
 
 $sess->SetValue([
 
-	'name' => $name,
+    'name' => $name,
 
-	'value' => $value,
+    'value' => $value,
 
 ]);
 
@@ -31,17 +32,12 @@ $sess->UnsetValue($name);
 
 echo $sess->GetValue($name);
 
-echo "<br>";
+echo '<br>';
 
 //checking the session is set or not
 
-if($sess->CheckStatus($name)){
-
-	echo "session is set";
-
-}else{
-
-	echo "session is not set";
-
+if ($sess->CheckStatus($name)) {
+    echo 'session is set';
+} else {
+    echo 'session is not set';
 }
-
